@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1951ABFB1E45E081007CCE4D /* ViewControllerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951ABFA1E45E081007CCE4D /* ViewControllerSignUp.swift */; };
 		19F8CF9C1E45828D00AC21D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8CF9B1E45828D00AC21D8 /* AppDelegate.swift */; };
 		19F8CF9E1E45828D00AC21D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8CF9D1E45828D00AC21D8 /* ViewController.swift */; };
 		19F8CFA11E45828D00AC21D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F8CF9F1E45828D00AC21D8 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1951ABFA1E45E081007CCE4D /* ViewControllerSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSignUp.swift; sourceTree = "<group>"; };
 		19F8CF981E45828D00AC21D8 /* QHacks2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QHacks2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F8CF9B1E45828D00AC21D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19F8CF9D1E45828D00AC21D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				2484929B1E45AC0A00505F62 /* ViewControllerClient.swift */,
 				19F8CF9B1E45828D00AC21D8 /* AppDelegate.swift */,
 				19F8CF9D1E45828D00AC21D8 /* ViewController.swift */,
+				1951ABFA1E45E081007CCE4D /* ViewControllerSignUp.swift */,
 				19F8CF9F1E45828D00AC21D8 /* Main.storyboard */,
 				19F8CFA21E45828D00AC21D8 /* Assets.xcassets */,
 				19F8CFA41E45828D00AC21D8 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19F8CF9E1E45828D00AC21D8 /* ViewController.swift in Sources */,
+				1951ABFB1E45E081007CCE4D /* ViewControllerSignUp.swift in Sources */,
 				2484929C1E45AC0A00505F62 /* ViewControllerClient.swift in Sources */,
 				2484929E1E45AC2600505F62 /* ViewControllerDr.swift in Sources */,
 				19F8CF9C1E45828D00AC21D8 /* AppDelegate.swift in Sources */,

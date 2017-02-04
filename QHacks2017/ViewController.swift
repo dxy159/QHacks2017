@@ -31,14 +31,23 @@ class ViewController: UIViewController {
         
         if (segue.identifier == "login") {
             
-            if ((email.text == "") || (password.text == "")) {
+            if let client = segue.destination as? ViewControllerClient {
             
-                let alert = UIAlertController(title: "Login Failed", message: "Please provide valid health information.", preferredStyle: .alert)
-                let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                if ((email.text == "") || (password.text == "")) {
                 
-                alert.addAction(action)
-                
-                present(alert, animated: true, completion: nil)
+                    let alert = UIAlertController(title: "Login Failed", message: "Please provide valid health information.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    
+                    alert.addAction(action)
+                    
+                    present(alert, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    client.em = email.text!
+                    client.pw = password.text!
+                    
+                }
                 
             }
             

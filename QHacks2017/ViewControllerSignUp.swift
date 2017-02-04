@@ -1,24 +1,22 @@
 //
-//  ViewControllerClient.swift
+//  ViewControllerSignUp.swift
 //  QHacks2017
 //
-//  Created by Behshad Hosseini on 2017-02-04.
+//  Created by Richard Ni on 2017-02-04.
 //  Copyright © 2017 Richard Ni. All rights reserved.
 //
 
 import UIKit
 
-class ViewControllerClient: UIViewController {
+class ViewControllerSignUp: UIViewController {
 
-    @IBOutlet weak var info: UILabel!
-    
-    var em = String()
-    var pw = String()
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var confirmPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        info.text = "Em: \(em), Pw: \(pw)"
+
         // Do any additional setup after loading the view.
     }
 
