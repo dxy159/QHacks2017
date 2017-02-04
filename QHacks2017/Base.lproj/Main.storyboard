@@ -54,7 +54,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drug On Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-Eb-g3Z">
                                 <rect key="frame" x="36" y="66" width="317" height="54"/>
@@ -138,12 +138,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-Hc-Smk">
-                                <rect key="frame" x="53" y="362" width="257" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKa-ru-YGm">
+                                <rect key="frame" x="53" y="226" width="257" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQU-VK-Cxt">
                                 <rect key="frame" x="137" y="509" width="100" height="65"/>
@@ -155,12 +155,26 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="signup" id="UH5-UH-cgg"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKa-ru-YGm">
-                                <rect key="frame" x="53" y="263" width="257" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dU-a4-aw2">
+                                <rect key="frame" x="53" y="356" width="257" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Health Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1uw-zp-13R">
+                                <rect key="frame" x="53" y="427" width="257" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-Hc-Smk">
+                                <rect key="frame" x="53" y="288" width="257" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,8 +188,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clientName" destination="4dU-a4-aw2" id="7Kt-bK-gb5"/>
                         <outlet property="confirmPassword" destination="SYf-Hc-Smk" id="M9V-ud-6va"/>
                         <outlet property="email" destination="wgw-G4-NyK" id="f0f-gw-Bgc"/>
+                        <outlet property="healthNumber" destination="1uw-zp-13R" id="1hx-7A-e2I"/>
                         <outlet property="password" destination="PKa-ru-YGm" id="gRW-In-2EP"/>
                     </connections>
                 </viewController>
@@ -229,13 +245,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyP-Iz-hJx">
+                                <rect key="frame" x="300" y="45" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Xp-r7-jft"/>
+                                    <constraint firstAttribute="width" constant="48" id="I0G-Vf-yqg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="clo-Yt-yF3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ttP-im-vp1" secondAttribute="trailing" constant="23" id="0BO-Gt-X0c"/>
                             <constraint firstItem="jbq-md-2zw" firstAttribute="top" secondItem="VFG-AH-mAZ" secondAttribute="bottom" constant="25" id="0Lz-7u-dtL"/>
                             <constraint firstItem="ttP-im-vp1" firstAttribute="centerX" secondItem="wap-Ut-OHE" secondAttribute="centerX" id="419-1r-9lR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AyP-Iz-hJx" secondAttribute="trailing" constant="11" id="KNG-bH-pgf"/>
                             <constraint firstItem="9Fe-dR-Cv9" firstAttribute="top" secondItem="Isa-Yc-No6" secondAttribute="bottom" constant="45" id="Ot9-S4-Pr4"/>
+                            <constraint firstItem="AyP-Iz-hJx" firstAttribute="top" secondItem="Isa-Yc-No6" secondAttribute="bottom" constant="25" id="XDO-ID-e8T"/>
                             <constraint firstItem="9Fe-dR-Cv9" firstAttribute="trailing" secondItem="wap-Ut-OHE" secondAttribute="trailingMargin" id="c6U-UN-Gix"/>
                             <constraint firstItem="9Fe-dR-Cv9" firstAttribute="leading" secondItem="wap-Ut-OHE" secondAttribute="leadingMargin" id="cXC-vq-lx3"/>
                             <constraint firstItem="VFG-AH-mAZ" firstAttribute="trailing" secondItem="ttP-im-vp1" secondAttribute="trailing" id="ix7-p2-8PG"/>
@@ -255,4 +287,7 @@
             <point key="canvasLocation" x="360.80000000000001" y="-322.48875562218893"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="clo-Yt-yF3"/>
+    </inferredMetricsTieBreakers>
 </document>

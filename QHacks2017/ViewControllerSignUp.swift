@@ -13,6 +13,8 @@ class ViewControllerSignUp: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
+    @IBOutlet weak var clientName: UITextField!
+    @IBOutlet weak var healthNumber: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
