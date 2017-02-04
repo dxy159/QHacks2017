@@ -285,6 +285,7 @@
                     <connections>
                         <outlet property="info" destination="9Fe-dR-Cv9" id="48R-B2-AHt"/>
                         <outlet property="medication" destination="VFG-AH-mAZ" id="FIf-Gh-n32"/>
+                        <segue destination="nLh-IS-zFn" kind="presentation" identifier="prescription" id="5lQ-0s-ceK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3R-de-WvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -344,6 +345,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VNe-Em-a0F" secondAttribute="trailing" constant="40" id="yEL-g9-fJM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="description" destination="3eg-WD-m7P" id="31f-Au-ELV"/>
+                        <outlet property="doctorDescription" destination="3eg-WD-m7P" id="Wkb-D8-PFC"/>
+                        <outlet property="hoursInBetween" destination="Chd-Iy-CM3" id="g4f-cc-gkw"/>
+                        <outlet property="name" destination="VNe-Em-a0F" id="neh-tO-5Ch"/>
+                        <outlet property="timesPerDay" destination="C5q-lq-Q4n" id="Njz-eD-diu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inP-Uz-BNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

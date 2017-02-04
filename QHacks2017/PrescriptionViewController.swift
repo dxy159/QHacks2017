@@ -10,9 +10,23 @@ import UIKit
 
 class PrescriptionViewController: UIViewController {
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var doctorDescription: UILabel!
+    @IBOutlet weak var timesPerDay: UILabel!
+    @IBOutlet weak var hoursInBetween: UILabel!
+    
+    var index = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let prescription = prescriptionList.prescriptions[index]
+        print(index)
+        //name.text = prescription.medicineName
+        //doctorDescription.text = prescription.description
+        //timesPerDay.text = "Take this \(prescription.timesPerDay) times a day."
+        //hoursInBetween.text = "Take this every \(prescription.hoursInBetween) times a day."
+        
         // Do any additional setup after loading the view.
     }
 
