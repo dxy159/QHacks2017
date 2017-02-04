@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tap(gesture:)))
         view.addGestureRecognizer(tapGesture)
+        
+        prescriptionList.removeLast()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

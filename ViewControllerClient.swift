@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewControllerClient: UIViewController {
+class ViewControllerClient: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var medication: UITableView!
     
     var em = String()
     var pw = String()
@@ -19,12 +20,29 @@ class ViewControllerClient: UIViewController {
         super.viewDidLoad()
         
         info.text = "Em: \(em), Pw: \(pw)"
+        prescriptionList.add(medicineName: "Dank Herb", description: "The dank herb", timesPerDay: 5, hoursInBetween: 3)
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Handle table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return prescriptionList.prescriptions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Default")
+        
+        cell.textLabel?.text = prescriptionList.prescriptions[indexPath.row].medicineName
+        cell.detailTextLabel?.text = prescriptionList.prescriptions[indexPath.row].description
+        
+        return cell
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -33,7 +33,7 @@ class ViewControllerSignUp: UIViewController {
         
         if segue.identifier == "signup" {
             
-            if ((email.text == "") || (password.text == "") || (confirmPassword.text == "")) {
+            if ((email.text == "") || (password.text == "") || (confirmPassword.text == "") || (clientName.text == "") || (healthNumber.text == "")) {
                 
                 let alert = UIAlertController(title: "Login Failed", message: "You left the fields blank.", preferredStyle: .alert)
                 let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
