@@ -51,8 +51,12 @@ class ViewControllerClient: UIViewController, UITableViewDelegate, UITableViewDa
         
         let row = indexPath.row
         
-        print("Row: \(row)")
-        print("Medicine: \(prescriptionList.prescriptions[row].medicineName)")
+        //print("Row: \(row)")
+        //print("Medicine: \(prescriptionList.prescriptions[row].medicineName)")
+        
+        let destination = PrescriptionViewController()
+        
+        
         
     }
     

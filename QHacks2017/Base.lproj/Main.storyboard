@@ -291,23 +291,63 @@
             </objects>
             <point key="canvasLocation" x="360.80000000000001" y="-322.48875562218893"/>
         </scene>
-        <!--View Controller-->
+        <!--Prescription View Controller-->
         <scene sceneID="SOa-2A-W7Z">
             <objects>
-                <viewController id="nLh-IS-zFn" sceneMemberID="viewController">
+                <viewController id="nLh-IS-zFn" customClass="PrescriptionViewController" customModule="QHacks2017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="suc-nD-xve"/>
                         <viewControllerLayoutGuide type="bottom" id="OkI-hS-q02"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8nV-5f-5mM">
+                    <view key="view" contentMode="scaleToFill" id="8nV-5f-5mM" customClass="Pres">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNe-Em-a0F">
+                                <rect key="frame" x="55" y="64" width="264" height="50"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eg-WD-m7P">
+                                <rect key="frame" x="40" y="160" width="294" height="138"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Times Per Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-lq-Q4n">
+                                <rect key="frame" x="55" y="348" width="264" height="52"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Every __ Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-Iy-CM3">
+                                <rect key="frame" x="55" y="475" width="264" height="61"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Chd-Iy-CM3" firstAttribute="leading" secondItem="8nV-5f-5mM" secondAttribute="leadingMargin" constant="39" id="5Gy-Ha-sdA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3eg-WD-m7P" secondAttribute="trailing" constant="25" id="AyJ-Wb-9yJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Chd-Iy-CM3" secondAttribute="trailing" constant="40" id="H3b-Zq-Fbr"/>
+                            <constraint firstItem="3eg-WD-m7P" firstAttribute="top" secondItem="VNe-Em-a0F" secondAttribute="bottom" constant="46" id="Nhb-gH-1eh"/>
+                            <constraint firstItem="VNe-Em-a0F" firstAttribute="top" secondItem="suc-nD-xve" secondAttribute="bottom" constant="44" id="QDb-JC-ONc"/>
+                            <constraint firstItem="OkI-hS-q02" firstAttribute="top" secondItem="Chd-Iy-CM3" secondAttribute="bottom" constant="131" id="RND-nI-y2t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C5q-lq-Q4n" secondAttribute="trailing" constant="40" id="evM-NI-2vs"/>
+                            <constraint firstItem="C5q-lq-Q4n" firstAttribute="leading" secondItem="8nV-5f-5mM" secondAttribute="leadingMargin" constant="39" id="f65-93-lqT"/>
+                            <constraint firstItem="Chd-Iy-CM3" firstAttribute="top" secondItem="C5q-lq-Q4n" secondAttribute="bottom" constant="75" id="gWa-Jg-38f"/>
+                            <constraint firstItem="3eg-WD-m7P" firstAttribute="leading" secondItem="8nV-5f-5mM" secondAttribute="leadingMargin" constant="24" id="mLn-wE-C4O"/>
+                            <constraint firstItem="VNe-Em-a0F" firstAttribute="leading" secondItem="8nV-5f-5mM" secondAttribute="leadingMargin" constant="39" id="p1L-hq-x54"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VNe-Em-a0F" secondAttribute="trailing" constant="40" id="yEL-g9-fJM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inP-Uz-BNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="-322"/>
+            <point key="canvasLocation" x="1221.5999999999999" y="-322.48875562218893"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
