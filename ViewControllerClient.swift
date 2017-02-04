@@ -27,6 +27,27 @@ class ViewControllerClient: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "logout" {
+            
+            if let main = segue.destination as? ViewController {
+            
+                let alert = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+                    self.present(main, animated: true, completion: nil)
+                }))
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                
+                present(alert, animated: true, completion: nil)
+                
+            }
+            
+        }
+        
+    }
+    
 
     /*
     // MARK: - Navigation
