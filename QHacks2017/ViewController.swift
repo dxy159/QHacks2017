@@ -11,9 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     //Main Controller
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tap(gesture:)))
+        view.addGestureRecognizer(tapGesture)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -22,8 +27,30 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "login") {
+            
+            if ((email.text == "") || (password.text == "")) {
+            
+                let alert = UIAlertController(title: "Login Failed", message: "Please provide valid health information.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                
+                alert.addAction(action)
+                
+                present(alert, animated: true, completion: nil)
+                
+            }
+            
+        }
+        
+    }
     
-
+    
+    func tap(gesture: UITapGestureRecognizer) {
+        email.resignFirstResponder()
+        password.resignFirstResponder()
+    }
 
 }
 

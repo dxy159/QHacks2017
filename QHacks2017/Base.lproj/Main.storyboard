@@ -44,7 +44,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.05960557291662294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tl0-Ks-OV8" kind="show" id="sec-ka-ya0"/>
+                                    <segue destination="Tl0-Ks-OV8" kind="show" identifier="login" id="sec-ka-ya0"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ho6-I6-ZZz">
@@ -93,6 +93,10 @@
                             <constraint firstItem="qSr-YI-nis" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wn5-xu-X38"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="TM5-SK-Zws" id="k7H-1U-SLv"/>
+                        <outlet property="password" destination="ho6-I6-ZZz" id="oMi-hZ-m1G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,7 +142,7 @@
                                         <rect key="frame" x="0.0" y="28" width="297" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Wl-yX-jwh" id="v2V-ay-DNv">
-                                            <rect key="frame" x="0.0" y="0.0" width="297" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="297" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
