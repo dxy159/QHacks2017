@@ -30,10 +30,12 @@
 	        </div>
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Login</a></li>
-	        <li><a href="#">Sign Up</a></li>
-	      </ul>
+	      <form class="nav navbar-nav navbar-right">
+	      	<div class="form-group">
+	          <button type="button" data-toggle="modal" data-target="#login">Login</button>
+	          <button type="button" data-toggle="modal" data-target="#signup">Sign Up</button>
+	        </div>
+	      </form>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
@@ -46,9 +48,113 @@
       </div>
     </div>
 
+    <!-- login modal -->
+    <div id="login" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Login to Drugs on Time.</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+            <h5 class="m-b-2">Login Information</h5>
+              <fieldset class="form-group">
+                <label for="mail">Email</label>
+                <input type="email" class="form-control" id="mail">
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="password">Password</label>
+                <input type="text" class="form-control" id="password">
+              </fieldset>
+              <button type="submit" class="btn btn-primary btn-lg">Login</button>
+
+            </form>
+            <!-- /registration form -->
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- signup modal -->
+    <div id="signup" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Sign Up for Drugs on Time</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+            <h5 class="m-b-2">Please Provide Your Information</h5>
+              <fieldset class="form-group">
+                <label for="mail">Email</label>
+                <input type="email" class="form-control" id="mail">
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="password">Password</label>
+                <input type="email" class="form-control" id="password">
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name">
+              </fieldset>
+              <fieldset class="form-group">
+                <label for="health-number">Health Number</label>
+                <input type="text" class="form-control" id="health-number">
+              </fieldset>
+
+              <div class="form-group custom-controls-stacked">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="is-doctor">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">I am a doctor</span>
+                </label>
+              </div>
+
+              <fieldset class="form-group" id="doctor-id">
+                <label for="doctor-id">Doctor ID</label>
+                <input type="text" class="form-control">
+              </fieldset>
+
+              <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+
+            </form>
+            <!-- /registration form -->
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+		    var isDoctor = $('#is-doctor');     
+		    MshowHide();    
+
+		    mgift.change(function () {
+		        MshowHide();
+		    });
+		});
+
+		function MshowHide() {
+		    var isDoctor = $('#is-doctor');
+		    var doctorId = $('#doctor-id');
+
+		    if (isDoctor.checked) {
+		        doctorId.show();
+		    } else {       
+		        doctorId.hide();        
+		    }
+		}
+	</script>
 
 </body>
 </html>
