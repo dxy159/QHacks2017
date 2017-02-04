@@ -45,6 +45,17 @@ class ViewControllerClient: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let row = indexPath.row
+        
+        print("Row: \(row)")
+        print("Medicine: \(prescriptionList.prescriptions[row].medicineName)")
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "logout" {
