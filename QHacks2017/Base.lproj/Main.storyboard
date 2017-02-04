@@ -82,7 +82,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="u3B-BC-pNw" kind="show" id="MmT-LX-dCl"/>
+                                    <segue destination="u3B-BC-pNw" kind="show" identifier="" id="MmT-LX-dCl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -151,6 +151,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="signup" id="UH5-UH-cgg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKa-ru-YGm">
                                 <rect key="frame" x="53" y="263" width="257" height="30"/>
