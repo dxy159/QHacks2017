@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,33 +24,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please login to your health record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSr-YI-nis">
-                                <rect key="frame" x="16" y="84" width="343" height="43"/>
+                                <rect key="frame" x="16" y="171" width="343" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="HBe-Gd-ONv"/>
                                     <constraint firstAttribute="height" constant="43" id="vvP-aG-3C3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.29210194852699267" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.98545677386887987" green="1" blue="0.98724628991208963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-SK-Zws">
-                                <rect key="frame" x="16" y="247" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="D3Z-hp-fC8"/>
-                                    <constraint firstAttribute="height" constant="30" id="RGc-0p-rtn"/>
-                                    <constraint firstAttribute="width" secondItem="TM5-SK-Zws" secondAttribute="height" multiplier="343:30" id="a5V-F0-p7f"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMh-md-SWH">
                                 <rect key="frame" x="153" y="474" width="69" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="SS0-IB-JuX"/>
                                     <constraint firstAttribute="height" constant="46" id="mW9-Ag-ZXE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="0.0" blue="0.05960557291662294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -58,7 +47,7 @@
                                     <segue destination="Tl0-Ks-OV8" kind="show" id="sec-ka-ya0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ho6-I6-ZZz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ho6-I6-ZZz">
                                 <rect key="frame" x="59" y="303" width="257" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ho6-I6-ZZz" secondAttribute="height" multiplier="257:30" id="TPb-2R-xgm"/>
@@ -67,15 +56,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drug On Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxy-Eb-g3Z">
+                                <rect key="frame" x="36" y="66" width="317" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-SK-Zws">
+                                <rect key="frame" x="59" y="247" width="257" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="D3Z-hp-fC8"/>
+                                    <constraint firstAttribute="height" constant="30" id="RGc-0p-rtn"/>
+                                    <constraint firstAttribute="width" secondItem="TM5-SK-Zws" secondAttribute="height" multiplier="343:30" constant="-86" id="a5V-F0-p7f"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qSr-YI-nis" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="48c-2G-nSB"/>
-                            <constraint firstItem="TM5-SK-Zws" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6WC-I7-D7Y"/>
+                            <constraint firstItem="qSr-YI-nis" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="151" id="48c-2G-nSB"/>
+                            <constraint firstItem="TM5-SK-Zws" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="43" id="6WC-I7-D7Y"/>
                             <constraint firstItem="TM5-SK-Zws" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZNm-YO-bBN"/>
                             <constraint firstItem="ho6-I6-ZZz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cs2-Sd-H0Y"/>
                             <constraint firstItem="qSr-YI-nis" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e8k-HQ-nfn"/>
-                            <constraint firstItem="TM5-SK-Zws" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gAz-Km-7fu"/>
+                            <constraint firstItem="TM5-SK-Zws" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-43" id="gAz-Km-7fu"/>
                             <constraint firstItem="ho6-I6-ZZz" firstAttribute="top" secondItem="TM5-SK-Zws" secondAttribute="bottom" constant="26" id="h8s-m0-99i"/>
                             <constraint firstItem="nMh-md-SWH" firstAttribute="top" secondItem="ho6-I6-ZZz" secondAttribute="bottom" constant="141" id="jNs-iE-KFv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ho6-I6-ZZz" secondAttribute="trailing" constant="43" id="k3r-L2-GeQ"/>
@@ -131,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="28" width="297" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Wl-yX-jwh" id="v2V-ay-DNv">
-                                            <rect key="frame" x="0.0" y="0.0" width="297" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="297" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
