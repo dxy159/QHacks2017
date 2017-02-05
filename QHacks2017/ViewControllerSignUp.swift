@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewControllerSignUp: UIViewController {
 
@@ -28,7 +29,27 @@ class ViewControllerSignUp: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func httpCall() {
+    let parameters: Parameters = [
+        "name": clientName.text!,
+        "email":email.text!,
+        "number_id":healthNumber.text!,
+        "password": password.text
+    ]
     
+    // All three of these calls are equivalent
+    Alamofire.request("https://quiet-ravine-61683.herokuapp.com/api/v1/client_infos.json", method: .post, parameters: parameters).responseJSON { response in
+    print(response.request)  // original URL request
+    print(response.response) // HTTP URL response
+    print(response.data)     // server data
+    print(response.result)   // result of response serialization
+    
+    //            if let JSON = response.result.value {
+    //                print("JSON: \(JSON)")
+    //            }
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "signup" {
@@ -53,7 +74,9 @@ class ViewControllerSignUp: UIViewController {
                 
             } else {
                 
-                httpPost(email: email.text!, password: password.text!, name: clientName.text!, healthID: healthNumber.text!)
+                httpCall()
+                
+//                httpPost(email: email.text!, password: password.text!, name: clientName.text!, healthID: healthNumber.text!)
                 
             }
             
@@ -61,36 +84,39 @@ class ViewControllerSignUp: UIViewController {
         
     }
     
-    func httpPost(email: String, password: String, name: String, healthID: String) {
-        
-        //{"name":"anthony","email":"anthony@gmail.com","number_id":"123","password":"123"}
-        let json = ["name":name,"email":email,"number_id":healthID,"password":password]
-        
-        let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
-        print(name, email, healthID, password)
-        
-        // Create POST request
-        let url = URL(string: "https://quiet-ravine-61683.herokuapp.com/api/v1/client_infos.json")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        
-        // Insert json into body
-        request.httpBody = jsonData
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                print(error?.localizedDescription ?? "No data")
-                return
-            }
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any] {
-                print(responseJSON)
-            }
-        }
-        
-        task.resume()
-        
-    }
+    
+    
+    
+//    func httpPost(email: String, password: String, name: String, healthID: String) {
+//        
+//        //{"name":"anthony","email":"anthony@gmail.com","number_id":"123","password":"123"}
+//        let json = ["name":name,"email":email,"number_id":healthID,"password":password]
+//        
+//        let jsonData = try? JSONSerialization.data(withJSONObject: json, options: [])
+//        print(name, email, healthID, password)
+//        
+//        // Create POST request
+//        let url = URL(string: "https://quiet-ravine-61683.herokuapp.com/api/v1/client_infos.json")!
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        
+//        // Insert json into body
+//        request.httpBody = jsonData
+//        
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard let data = data, error == nil else {
+//                print(error?.localizedDescription ?? "No data")
+//                return
+//            }
+//            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+//            if let responseJSON = responseJSON as? [String: Any] {
+//                print(responseJSON)
+//            }
+//        }
+//        
+//        task.resume()
+//        
+//    }
     
     func tap(gesture: UITapGestureRecognizer) {
         email.resignFirstResponder()

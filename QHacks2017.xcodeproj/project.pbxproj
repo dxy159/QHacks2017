@@ -17,6 +17,7 @@
 		19F8CFA61E45828D00AC21D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F8CFA41E45828D00AC21D8 /* LaunchScreen.storyboard */; };
 		2484929C1E45AC0A00505F62 /* ViewControllerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484929B1E45AC0A00505F62 /* ViewControllerClient.swift */; };
 		2484929E1E45AC2600505F62 /* ViewControllerDr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484929D1E45AC2600505F62 /* ViewControllerDr.swift */; };
+		CCB21C057857A1F0AC4390F4 /* Pods_QHacks2017.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6F7E900F196108EF511C98 /* Pods_QHacks2017.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		19F8CFA71E45828D00AC21D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2484929B1E45AC0A00505F62 /* ViewControllerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerClient.swift; path = ../ViewControllerClient.swift; sourceTree = "<group>"; };
 		2484929D1E45AC2600505F62 /* ViewControllerDr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerDr.swift; path = ../ViewControllerDr.swift; sourceTree = "<group>"; };
+		3E6F7E900F196108EF511C98 /* Pods_QHacks2017.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QHacks2017.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2EB4FCAF5E6427186F2250 /* Pods-QHacks2017.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QHacks2017.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QHacks2017/Pods-QHacks2017.debug.xcconfig"; sourceTree = "<group>"; };
+		C9380AF8A092EEEB8FBE94D2 /* Pods-QHacks2017.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QHacks2017.release.xcconfig"; path = "Pods/Target Support Files/Pods-QHacks2017/Pods-QHacks2017.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB21C057857A1F0AC4390F4 /* Pods_QHacks2017.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D9E8DC7E1F245B8867B2FED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E6F7E900F196108EF511C98 /* Pods_QHacks2017.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		19F8CF8F1E45828C00AC21D8 = {
 			isa = PBXGroup;
 			children = (
 				19F8CF9A1E45828D00AC21D8 /* QHacks2017 */,
 				19F8CF991E45828D00AC21D8 /* Products */,
+				F7C5CD782B3CD8AE06682D1E /* Pods */,
+				0D9E8DC7E1F245B8867B2FED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			path = QHacks2017;
 			sourceTree = "<group>";
 		};
+		F7C5CD782B3CD8AE06682D1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A2EB4FCAF5E6427186F2250 /* Pods-QHacks2017.debug.xcconfig */,
+				C9380AF8A092EEEB8FBE94D2 /* Pods-QHacks2017.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19F8CFAA1E45828D00AC21D8 /* Build configuration list for PBXNativeTarget "QHacks2017" */;
 			buildPhases = (
+				D5990FF53B1E88E3A9D30249 /* [CP] Check Pods Manifest.lock */,
 				19F8CF941E45828D00AC21D8 /* Sources */,
 				19F8CF951E45828D00AC21D8 /* Frameworks */,
 				19F8CF961E45828D00AC21D8 /* Resources */,
+				5B042ABC7875A878E8576DCC /* [CP] Embed Pods Frameworks */,
+				0EC9883D51DF00515D5023A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EC9883D51DF00515D5023A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QHacks2017/Pods-QHacks2017-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B042ABC7875A878E8576DCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QHacks2017/Pods-QHacks2017-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5990FF53B1E88E3A9D30249 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19F8CF941E45828D00AC21D8 /* Sources */ = {
@@ -273,6 +348,7 @@
 		};
 		19F8CFAB1E45828D00AC21D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A2EB4FCAF5E6427186F2250 /* Pods-QHacks2017.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QHacks2017/Info.plist;
@@ -285,6 +361,7 @@
 		};
 		19F8CFAC1E45828D00AC21D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9380AF8A092EEEB8FBE94D2 /* Pods-QHacks2017.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QHacks2017/Info.plist;
