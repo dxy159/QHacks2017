@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -23,6 +24,28 @@ class ViewController: UIViewController {
         prescriptionList.removeLast()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    var JSON:JSONEncoding
+    
+    func httpCall() {
+        let parameters: Parameters = [
+            "email": email.text!
+        ]
+        
+        // All three of these calls are equivalent
+        Alamofire.request("http://localhost:3000/api/v1/client_infos.json", method: .get, parameters: parameters).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            JSON = response.result
+            
+            //            if let JSON = response.result.value {
+            //                print("JSON: \(JSON)")
+            //            }
+        }
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,6 +55,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "login") {
+            httpCall()
             
             if let client = segue.destination as? ViewControllerClient {
             
@@ -44,7 +68,9 @@ class ViewController: UIViewController {
                     
                     present(alert, animated: true, completion: nil)
                     
-                } else {
+                } else if () {
+                    
+                }else {
                     
                     client.em = email.text!
                     client.pw = password.text!
