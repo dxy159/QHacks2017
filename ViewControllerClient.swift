@@ -8,6 +8,8 @@
 
 import UIKit
 
+var points = Int()
+
 class ViewControllerClient: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var info: UILabel!
@@ -19,8 +21,12 @@ class ViewControllerClient: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        info.text = "Em: \(em), Pw: \(pw)"
-        prescriptionList.add(medicineName: "Dank Herb", description: "The dank herb", timesPerDay: 5, hoursInBetween: 3)
+        prescriptionList.add(medicineName: "Dank Herb", description: "The dank herb", timesPerDay: 5, hoursInBetween: 10)
+        
+        points = 100
+        info.text = "Your points: \(points)"
+        
+        var timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(ViewControllerClient.sendAlert), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
 
@@ -39,7 +45,7 @@ class ViewControllerClient: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Default")
         
         cell.textLabel?.text = prescriptionList.prescriptions[indexPath.row].medicineName
-        cell.detailTextLabel?.text = prescriptionList.prescriptions[indexPath.row].description
+        cell.detailTextLabel?.text = "This must be taken every 10 seconds."
         
         return cell
         
@@ -64,6 +70,16 @@ class ViewControllerClient: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
         
+    }
+    
+    func sendAlert() {
+        let alert = UIAlertController(title: "Time to take your meds!", message: "The dank herb.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Took it", style: .default, handler: { (action: UIAlertAction!) in
+            points += 100
+            self.info.text = "Your points: \(points)"
+            }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
 
